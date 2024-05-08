@@ -1,5 +1,14 @@
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   padding: 26px 0 22px;
+  width: 100%;
+  transition: top 0.3s;
+
+  &.scroll{
+    top: -118px;
+  }
 
   @include mobile{
     padding: 22px 0 18px;
