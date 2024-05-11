@@ -1,13 +1,13 @@
 .hero {
   position: relative;
-  padding-top: 201px;
+  padding: 201px 0 135px;
 
   @include mini-desktop{
     padding: 171px 0 121px;
   }
 
   @include mobile{
-    min-height: calc(100dvh - 128px);
+    min-height: calc(100dvh - 109px);
   }
 
   &::before {
@@ -71,10 +71,6 @@
       align-items: center;
       text-align: center;
     }
-  }
-
-  &__left {
-    max-width: 599px;
   }
 
   &__title {
@@ -235,7 +231,7 @@
     }
 
     &-body {
-      &-th {
+      &-td {
         font-weight: 700;
         font-size: 20px;
         line-height: 130%;

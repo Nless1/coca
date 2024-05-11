@@ -21,26 +21,26 @@ export const scrollWindow = () => {
             }
         }
 
-        body.addEventListener('click', headerLimpid)
-        let headerIsLimpid = false
+const burgerBtn = document.querySelector('.burger');
+const overlay = document.querySelector('.overlay');
 
-        function headerLimpid(){
-            const burgerBtn = document.querySelector('.burger')
-            const overlay = document.querySelector('.overlay')
+body.addEventListener('click', headerLimpid);
 
-            if(!burgerBtn && !overlay) return
-            if(pageYOffset < 70) return
+let headerIsLimpid = false;
 
-            if(headerIsLimpid){
-                header.style.transition = '.4s';
-                header.style.background = 'var(--neutral-color-10)';
-                headerIsLimpid = false
-            } else {
-                header.style.transition = '.4s';
-                header.style.background = 'transparent';
-                headerIsLimpid = true
-            }
+function headerLimpid(e) {
+    if(e.target !== burgerBtn && e.target !== overlay) return
+    if(window.pageYOffset <= 70) return
+        if (headerIsLimpid) {
+            header.style.transition = '0.4s';
+            header.style.background = 'var(--neutral-color-10)';
+            headerIsLimpid = false;
+        } else {
+            header.style.transition = '0.4s';
+            header.style.background = 'transparent';
+            headerIsLimpid = true;
         }
+}
         
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
