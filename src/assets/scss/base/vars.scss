@@ -16,7 +16,7 @@
 
   // primary-color
   --primary-color-50: #4e7ddb;
-  
+
   // success colors
   --success-color-70: #e2f8f0b3;
 
@@ -27,12 +27,12 @@
   --container-padding: 15px;
   --container-width: 1200px;
 
-  @include tablet{
-  --container-width: 860px;
+  @include tablet {
+    --container-width: 860px;
   }
 
-  @include mobile{
-  --container-width: 480px;
+  @include mobile {
+    --container-width: 480px;
   }
 
   // transition
@@ -55,7 +55,7 @@
   // logo-colors
   --logo-color-text: #fff;
   --logo-color-circle: #343542;
-  
+
   // success colors
   --success-color-70: #e2f8f033;
 

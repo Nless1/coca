@@ -5,6 +5,6 @@ import { scrollWindow } from './components/scroll-header';
 import { useTheme } from './components/theme.js';
 import { useBurger } from './components/burger.js';
 
-scrollWindow()
+scrollWindow();
 useTheme();
 useBurger();

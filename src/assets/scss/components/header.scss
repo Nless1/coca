@@ -6,11 +6,11 @@
   width: 100%;
   transition: top 0.3s;
 
-  &.scroll{
+  &.scroll {
     top: -118px;
   }
 
-  @include mobile{
+  @include mobile {
     padding: 22px 0 18px;
   }
 
@@ -23,7 +23,7 @@
     z-index: var(--z-index-4);
 
     & svg {
-      @include mobile{
+      @include mobile {
         width: 130px;
       }
 
@@ -59,7 +59,10 @@
       background-color: var(--neutral-color-10);
       opacity: 0;
       visibility: hidden;
-      transition: left var(--transition), opacity var(--transition), visibility var(--transition);
+      transition:
+        left var(--transition),
+        opacity var(--transition),
+        visibility var(--transition);
 
       &--visible {
         left: 0;
@@ -103,7 +106,7 @@
       color: var(--neutral-color-140);
       transform: translateX(-50%);
 
-      @include small-tablet{
+      @include small-tablet {
         top: -28px;
         font-size: 20px;
       }
@@ -145,7 +148,7 @@
     line-height: 26px;
     color: var(--neutral-color-100);
 
-    @include small-tablet{
+    @include small-tablet {
       font-size: 20px;
       line-height: 200%;
     }
