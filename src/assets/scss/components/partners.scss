@@ -41,15 +41,31 @@
     flex-wrap: wrap;
 
     @include mobile {
+      display: none;
       gap: 10px;
     }
   }
 
-  &__item {
+  &__slider.swiper{
+    display: none;
+    width: 100%;
+
+    @include mobile{
+      display: block;
+    }
+    
+    .slider-wrap{
+      transition-timing-function: linear;
+    }
+  }
+
+  &__slide.swiper-slide,
+  &__item{
     @include flex-all-center;
     border-radius: 16px;
-    width: 160px;
-    height: 90px;
-    background-color: #fff;
+    min-width: 160px;
+    min-height: 96px;
+    max-width: 160px;
+    background: #fff;
   }
 }

@@ -6,10 +6,6 @@
     padding: 171px 0 121px;
   }
 
-  @include mobile {
-    min-height: calc(100dvh - 109px);
-  }
-
   &::before {
     top: 16%;
     left: 18%;

@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 export const useInsightSlider = () => {
@@ -13,6 +14,20 @@ export const useInsightSlider = () => {
         centeredSlides: false,
       },
     },
+  });
+};
+
+export const usePartnersMobileSlider = () => {
+  new Swiper('.partners__slider', {
+    modules: [Autoplay],
+    slidesPerView: 'auto',
+    spaceBetween: 18,
+    loop: true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false
+    },
+    speed: 2000,
   });
 };
 
