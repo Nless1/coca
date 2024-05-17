@@ -32,7 +32,7 @@
     color: var(--neutral-color-150);
 
     @include mobile {
-      margin-bottom: 40px;
+      margin-bottom: 55px;
     }
   }
 
@@ -43,29 +43,69 @@
 
   &__slider {
     position: relative;
+    margin-bottom: 20px;
+  }
 
-    &-btns {
-      @include flex-all-center;
-      position: absolute;
-      top: 126px;
-      left: 50%;
-      z-index: var(--z-index-2);
-      border-radius: 50%;
-      width: 80px;
-      height: 80px;
-      background-color: #fff;
-      transform: translateX(-50%);
+  &__btns {
+    @include flex-align-center;
+    gap: 16px;
+    justify-content: flex-end;
+    transform: translateY(-40px);
+  }
 
-      @include tablet {
-        display: none;
+  &__btn {
+    @include flex-all-center;
+    border: 1px solid var(--neutral-color-40);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition:
+      background-color var(--transition),
+      border-color var(--transition);
+
+    @include small-mobile {
+      width: 40px;
+      height: 40px;
+    }
+
+    & svg path {
+      transition: fill var(--transition);
+    }
+
+    &:hover {
+      border-color: var(--neutral-color-100);
+      background-color: var(--neutral-color-100);
+
+      & svg path {
+        fill: var(--neutral-color-10);
       }
+    }
 
-      @include small-mobile {
-        top: 80px;
-        left: 93%;
-        display: flex;
-        width: 50px;
-        height: 50px;
+    &--next {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__pagination{
+    @include flex-justify-center;
+    position: absolute;
+    left: 50vw;
+    width: 100px;
+    height: 40px;
+    transform: translateX(-50%);
+    
+    .swiper-pagination-bullet{
+      margin: 0 5px;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      background: var(--neutral-color-150);
+      transition: var(--transition);
+      cursor: pointer;
+
+      &-active{
+        background: aqua;
+        transform: scale(1.25);
       }
     }
   }

@@ -1,14 +1,21 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
-import { Autoplay } from 'swiper/modules';
-import { EffectFade } from 'swiper/modules';
+import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 export const useInsightSlider = () => {
   new Swiper('.insight__slider', {
+    modules: [Navigation, Pagination],
     slidesPerView: 'auto',
     spaceBetween: 32,
     loop: true,
+    navigation: {
+      prevEl: '.insight__btn--prev',
+      nextEl: '.insight__btn--next',
+    },
+    pagination: {
+      el: ".insight__pagination",
+      clickable: true,
+    },
     centeredSlides: true,
     breakpoints: {
       993: {
@@ -28,7 +35,7 @@ export const usePartnersMobileSlider = () => {
       delay: 0,
       disableOnInteraction: false
     },
-    speed: 2000,
+    speed: 5000,
   });
 };
 
