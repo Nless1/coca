@@ -109,7 +109,20 @@
         color: var(--neutral-color-150);
       }
     }
+
+    &.swiper-slide{
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+  
+    &.swiper-slide-active{
+      opacity: 1;
+      visibility: visible;
+      transition: var(--transition);
+    }
   }
+
 
   &__btns {
     @include flex-align-center;
