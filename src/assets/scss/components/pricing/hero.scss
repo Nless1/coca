@@ -2,7 +2,7 @@
   padding: 210px 0 78px;
 
   @include mobile {
-    padding: 40px 0 68px;
+    padding: 140px 0 68px;
   }
 
   &__top {
@@ -22,7 +22,7 @@
     }
 
     &::after {
-      bottom: -320px;
+      bottom: -177px;
     }
   }
 
@@ -145,6 +145,20 @@
     @include tablet {
       gap: 20px;
       flex-direction: column;
+    }
+
+    &-top{
+      @include flex-justify-between
+    }
+
+    &-badge{
+      @include flex-align-center;
+      border-radius: 100px;
+      padding: 6px 12px;
+      max-height: 32px;
+      font-size: 14px;
+      color: #fff;
+      background-color: var(--primary-color-30);
     }
 
     &-icon {
