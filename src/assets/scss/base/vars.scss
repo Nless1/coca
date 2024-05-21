@@ -6,28 +6,36 @@
   --neutral-color-40: #ced1d8;
   --neutral-color-50: #afb3bb;
   --neutral-color-60: #18181d;
+  --neutral-color-70: #606060;
+  --neutral-color-90: #161a34;
   --neutral-color-100: #1d1e25;
   --neutral-color-120: #828282;
   --neutral-color-130: #d9d9d9;
   --neutral-color-140: #000;
   --neutral-color-150: #7e8492;
 
-  // logo-colors
-  --logo-color-text: #101010;
-  --logo-color-circle: #101010;
-
-  // primary-color
+  // primary colors
+  --primary-color-30: #1463ff;
   --primary-color-50: #4e7ddb;
+  --primary-color-60: #4b628f;
 
   // success colors
   --success-color-70: #e2f8f0b3;
 
-  // overview colors
-  --overview-bg-color: #1d1e25;
+  // logo colors
+  --logo-color-text: #101010;
+  --logo-color-circle: #101010;
+
+  // bg colors
+  --black-bg-color: #1d1e25;
 
   // container
   --container-padding: 15px;
   --container-width: 1200px;
+
+  @include mini-desktop {
+    --container-width: 1000px;
+  }
 
   @include tablet {
     --container-width: 860px;
@@ -51,10 +59,11 @@
 [data-theme='dark'] {
   // neutral colors
   --neutral-color-10: #1d1e25;
+  --neutral-color-90: #18181D;
   --neutral-color-100: #fff;
   --neutral-color-140: #fff;
 
-  // logo-colors
+  // logo colors
   --logo-color-text: #fff;
   --logo-color-circle: #343542;
 
@@ -62,5 +71,5 @@
   --success-color-70: #e2f8f033;
 
   // overview colors
-  --overview-bg-color: #18181d;
+  --black-bg-color: #18181d;
 }

@@ -1,7 +1,7 @@
 .footer {
   padding: 112px 0 58px;
   color: #fff;
-  background-color: var(--overview-bg-color);
+  background-color: var(--black-bg-color);
 
   @include mobile {
     padding-top: 62px;
@@ -127,22 +127,32 @@
     }
 
     @include mobile {
+      display: grid;
       gap: 40px 60px;
-      flex-wrap: wrap;
-      justify-content: center;
+      justify-items: center;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      text-align: center;
     }
 
     @include small-mobile {
+      display: flex;
       gap: 10px;
+      flex-direction: column;
       text-align: center;
     }
   }
 
   &__item {
     &-title {
+      margin-bottom: 24px;
       padding: 5px 0;
       font-weight: 700;
       line-height: 150%;
+
+      @include small-mobile{
+        margin-bottom: 0;
+      }
     }
 
     @include small-mobile {
