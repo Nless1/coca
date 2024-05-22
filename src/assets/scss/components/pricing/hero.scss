@@ -22,7 +22,9 @@
     }
 
     &::after {
+      right: 200px;
       bottom: -177px;
+      filter: blur(60px);
     }
   }
 
