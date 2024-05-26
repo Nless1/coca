@@ -1,18 +1,16 @@
-import intlTelInput from 'intl-tel-input';
-import 'intl-tel-input/build/css/intlTelInput.css';
+import Inputmask from "inputmask";
+export const usePhone = () => {  
+    const telInputs = document.querySelectorAll('input[type="tel"]');
+    const im = new Inputmask('+7 (999) 999-99-99');
+    im.mask(telInputs);
 
-export const usePhone = () => {
-  const input = document.querySelector('#phone');
-
-  intlTelInput(input, {
-    initialCountry: 'auto',
-    geoIpLookup: (callback) => {
-      fetch('https://ipapi.co/json')
-        .then((res) => res.json())
-        .then((data) => callback(data.country_code))
-        .catch(() => callback('us'));
-    },
-    utilsScript:
-      'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js',
-  });
-};
+    const submitButton = document.querySelector('button[type="submit"]');
+    submitButton.addEventListener('click', function(event) {
+        telInputs.forEach(input => {
+            if (input.value.replace(/\D/g, '').length !== 11) {
+                event.preventDefault(); // Отменяем отправку формы
+                alert("Поле номера телефона не заполнено полностью");
+            }
+        });
+    });
+}

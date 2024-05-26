@@ -7,7 +7,7 @@ export default defineConfig({
   root: './src',
   base: '/coca/',
   server: {
-    port: 3000,
+    port: 228,
     open: true,
   },
   publicDir: './src/assets',

@@ -32,6 +32,11 @@
     @include mobile {
       gap: 36px;
     }
+
+    &-yandex{
+      width: 987px;
+      height: 545px;
+    }
   }
 
   &__contacts {
@@ -90,3 +95,4 @@
     }
   }
 }
+
