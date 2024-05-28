@@ -26,6 +26,10 @@ body[data-theme='light'] .img-dark-theme {
       align-items: center;
       text-align: center;
     }
+
+    @include mobile{
+      margin-bottom: 0;
+    }
   }
 
   &__left{
