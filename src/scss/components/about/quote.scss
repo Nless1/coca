@@ -1,0 +1,47 @@
+.quote{
+  &__decor{
+    @include mobile{
+      display: none;
+    }
+  }
+
+  &__decor::before{
+    top: -426px;
+    left: 300px;
+  }
+
+  &__decor::after{
+    top: 354px;
+    right: 139px;
+  }
+
+  &__container{
+    @include flex-justify-between;
+    border-top: 1px solid var(--neutral-color-30);
+    border-bottom: 1px solid var(--neutral-color-30);
+    padding: 85px 0;
+
+    @include tablet{
+      @include flex-column-all-center;
+      text-align: center;
+    }
+  }
+
+  &__title,
+  &__text{
+    font-weight: 600;
+  }
+
+  &__title{
+    max-width: 498px;
+
+    @include tablet{
+      margin-bottom: 32px;
+    }
+  }
+
+  &__text{
+    max-width: 522px;
+    line-height: 150%;
+  }
+}

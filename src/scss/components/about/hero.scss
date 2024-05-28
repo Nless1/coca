@@ -5,10 +5,14 @@ body[data-theme='light'] .img-dark-theme {
 
 .hero {
   position: relative;
-  padding: 201px 0 135px;
+  padding: 201px 0 165px;
 
   @include mini-desktop {
     padding: 171px 0 121px;
+  }
+
+  @include mobile{
+    padding-bottom: 90px;
   }
 
   &__container-top {
@@ -88,6 +92,10 @@ body[data-theme='light'] .img-dark-theme {
 
   &__container{
     height: 634px;
+
+    @include tablet{
+      height: auto;
+    }
   }
 
   &__inner{
