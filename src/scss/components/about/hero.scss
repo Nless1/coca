@@ -59,8 +59,12 @@ body[data-theme='light'] .img-dark-theme {
   &__subtitle {
     margin-bottom: 69px;
 
+    @include mini-desktop{
+      justify-content: center;
+    }
+
     &::before{
-      transform: translateY(-83px)
+      transform: translateY(-95px)
     }
   }
 
@@ -74,23 +78,50 @@ body[data-theme='light'] .img-dark-theme {
       top: -135px;
       left: -58px;
       max-width: none;
+
+      @include mini-desktop{
+        top: -91px;
+        left: -13px;
+      }
     }
   }
 
+  &__container{
+    height: 634px;
+  }
+
   &__inner{
-    position: relative;
-    left: 400px;
-    max-width: 1574px;
+    position: absolute;
+    
+    @include tablet{
+      position: static;
+    }
   }
 
   &__list{
     display: flex;
     gap: 32px;
+
+    @include small-tablet{
+      justify-content: center;
+    }
   }
 
   &__item{
     width: 100%;
     max-width: 502px;
+  }
+  
+  &__item:first-child{
+    @include small-tablet{
+    display: none;
+    }
+  }
+
+  &__item:last-child{
+    @include tablet{
+    display: none;
+    }
   }
 
   &__item-title{
