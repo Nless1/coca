@@ -1,6 +1,6 @@
 .articles {
   position: relative;
-  padding: 201px 0 135px;
+  padding: 200px 0 135px;
 
   &__container-top{
     margin-bottom: 135px;
@@ -15,11 +15,11 @@
   }
 
   @include mini-desktop {
-    padding: 171px 0 121px;
+    padding: 130px 0 121px;
   }
 
   @include mobile{
-    padding-bottom: 90px;
+    padding-top: 60px;
   }
 
   &__title{
@@ -55,11 +55,15 @@
     height: 1070px;
 
     @include mini-desktop{
-      height: 800px;
+      height: 900px;
+    }
+
+    @include mobile{
+      height: 750px;
     }
 
     @include small-mobile{
-      height: 700px;
+      height: 800px;
     }
   }
 
