@@ -3,6 +3,7 @@ export const scrollWindow = () => {
 
   window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
+    header.style.background = 'var(--neutral-color-10)';
     const currentScroll =
       window.pageYOffset || document.documentElement.scrollTop;
     const body = document.body;

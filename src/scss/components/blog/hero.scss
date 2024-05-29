@@ -1,8 +1,30 @@
 .hero {
   position: relative;
-  padding: 201px 0 165px;
+  padding: 201px 0 135px;
 
-  &__container{
+  .page-decor{
+    &::before{
+      top: -100px;
+      left: 350px;
+    }
+
+    &::after{
+      top: 230px;
+      right: 220px;
+    }
+
+    @include mobile{
+      display: none;
+    }
+  }
+
+  &__container-top{
+    margin-bottom: 135px;
+
+    @include small-tablet{
+      margin-bottom: 75px;
+    }
+
     @include mini-desktop{
     text-align: center;
     }
@@ -32,6 +54,150 @@
   &__subtitle{
     @include mini-desktop{
       display: block;
+    }
+  }
+
+// =============================
+
+  &__container-main{
+    padding-bottom: 170px;
+    height: 810px;
+
+    @include small-mobile{
+      height: 700px;
+    }
+  }
+
+  &__list{
+    display: flex;
+    gap: 0 44px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    margin-left: 14px;
+
+    @include mini-desktop{
+      margin-bottom: 60px;
+    }
+
+    @include small-tablet{
+      gap: 0 24px;
+      justify-content: center;
+      margin-left: 0;
+    }
+  }
+
+  &__item{
+    padding: 13px 0;
+  }
+
+  &__link{
+    font-weight: 500;
+    color: var(--neutral-color-150);
+  }
+
+  &__item:first-child
+    &__link{
+      border-bottom: 2px solid var(--neutral-color-140);
+      color: var(--neutral-color-140);
+    }
+
+    // =====================
+
+    &__inner{
+      position: absolute;
+      width: 100%;
+      
+      @include small-desktop{
+        position: static
+      }
+    }
+
+  &__btns {
+    @include flex-align-center;
+    gap: 16px;
+    justify-content: flex-end;
+    width: 75%;
+    transform: translateY(-40px);
+  }
+
+  &__btn {
+    @include flex-all-center;
+    border: 1px solid var(--neutral-color-40);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition:
+      background-color var(--transition),
+      border-color var(--transition);
+
+    @include small-mobile {
+      width: 40px;
+      height: 40px;
+    }
+
+    & svg path {
+      transition: fill var(--transition);
+    }
+
+    &:hover {
+      border-color: var(--neutral-color-100);
+      background-color: var(--neutral-color-100);
+
+      & svg path {
+        fill: var(--neutral-color-10);
+      }
+    }
+
+    &--next {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .swiper-slide{
+    width: 515px;
+  }
+
+  .swiper-slide.swiper-slide-three{
+    width: 379px;
+  }
+
+  .swiper-slide.swiper-slide-three h3{
+    width: 100%;
+  }
+  
+  &__article img{
+    margin-bottom: 16px;
+  }
+
+  &__article-head{
+    @include flex-justify-between;
+    gap: 30px;
+    color: var(--neutral-color-150);
+  }
+
+  &__article-date{
+    margin-bottom: 24px;
+  }
+
+  &__article-author{
+    font-style: normal;
+  }
+
+  &__article-title{
+    margin-bottom: 16px;
+    width: 88%;
+    line-height: 125%;
+    letter-spacing: -1px;
+  }
+
+  &__article-text{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--neutral-color-150);
+
+    @include mobile{
+      font-size: 16px;
     }
   }
 }
