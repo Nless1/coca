@@ -143,12 +143,16 @@
     max-height: 200px;
   }
 
-  .socilas-list{
+  .socials-list{
     @include flex-align-center;
     gap: 5px 32px;
     flex-wrap: wrap;
     margin-bottom: 14px;
     text-align: center;
+  }
+
+  .socials-list path{
+    fill: var(--neutral-color-100);
   }
 
   .by{
